@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đề thi thử THPT Sở Bắc Ninh 2026</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 950px; margin: 0 auto; padding: 20px; background-color: #f0f2f5; color: #333; }
+        .page { display: none; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        .active { display: block; }
+        h1, h2 { color: #1a73e8; text-align: center; text-transform: uppercase; margin-bottom: 10px; }
+        .section-title { color: #e67e22; font-weight: bold; border-bottom: 2px solid #e67e22; padding-bottom: 5px; margin: 30px 0 15px 0; text-transform: uppercase; }
+        .passage { background: #f8f9fa; border-left: 6px solid #1a73e8; padding: 20px; margin: 20px 0; white-space: pre-wrap; text-align: justify; border-radius: 0 8px 8px 0; }
+        .question { margin-bottom: 30px; padding: 15px; border-bottom: 1px solid #eee; }
+        .options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px; }
+        .option { padding: 12px; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: all 0.2s; background: #fff; }
+        .option:hover:not(.locked) { border-color: #1a73e8; background: #f1f7fe; }
+        .correct { background-color: #d4edda !important; border-color: #28a745 !important; color: #155724; font-weight: bold; }
+        .incorrect { background-color: #f8d7da !important; border-color: #dc3545 !important; color: #721c24; }
+        .locked { cursor: default; pointer-events: none; opacity: 0.9; }
+        .nav-btns { display: flex; justify-content: space-between; margin-top: 30px; }
+        button { padding: 12px 25px; cursor: pointer; background-color: #1a73e8; color: white; border: none; border-radius: 6px; font-weight: bold; font-size: 16px; }
+        button:hover { background-color: #1557b0; }
+        input[type="text"] { width: 100%; padding: 12px; margin: 15px 0; border: 2px solid #ddd; border-radius: 6px; font-size: 16px; box-sizing: border-box; }
+        .full-text-box { background: #fffde7; padding: 15px; border: 1px dashed #fbc02d; border-radius: 8px; margin-top: 10px; font-size: 0.95em; line-height: 1.8; }
+        @media (max-width: 600px) { .options { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <div id="page-welcome" class="page active">
+        <h1>SỞ GIÁO DỤC VÀ ĐÀO TẠO BẮC NINH</h1>
+        <h2>KỲ THI THỬ TỐT NGHIỆP THPT 2026</h2>
+        <div style="margin-top: 50px; text-align: center;">
+            <p>Vui lòng nhập họ tên học sinh để bắt đầu bài thi:</p>
+            <input type="text" id="student-name" placeholder="Nhập tên của bạn...">
+            <button onclick="startQuiz()" style="width: 200px; margin-top: 10px;">BẮT ĐẦU</button>
+        </div>
+    </div>
+
+    <div id="page-1" class="page">
+        <div class="section-title">PHẦN I. CLOZE TEST (CÂU 1-6)</div>
+        <div class="passage">
+<b>Embrace Imperfection and Stop Pleasing Everyone</b>
+
+Many people feel pressure to stay busy, satisfy others, and complete too (1) ____ tasks each day. However, some readers have discovered that doing less can improve both happiness and well-being. By reducing unnecessary (2) ____, they have gained more time, energy, and peace of mind.
+
+One important lesson is to stop trying to please everyone. Accepting short (3) ____ of discomfort and allowing (4) ____ to solve their own problems can protect emotional energy. Another is to accept that things do not need to be perfect.
+
+For instance, choosing a suitable travel plan quickly instead of searching endlessly can save time and reduce stress. People can also (5) ____ phone calls instead of sending constant messages. Planning regular downtime, taking short breaks, and focusing on one important task at a time may also make life easier. Doing less does not mean achieving less. (6) ____ it can help people live more calmly, clearly, and effectively.
+        </div>
+
+        <div class="question" data-ans="D"><p><b>Question 1.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. Much</div><div class="option" onclick="check(this, 'B')">B. Few</div><div class="option" onclick="check(this, 'C')">C. Little</div><div class="option" onclick="check(this, 'D')">D. Many</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 2.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. Impulses</div><div class="option" onclick="check(this, 'B')">B. Standards</div><div class="option" onclick="check(this, 'C')">C. Demands</div><div class="option" onclick="check(this, 'D')">D. Appeals</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 3.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. Moments</div><div class="option" onclick="check(this, 'B')">B. Stages</div><div class="option" onclick="check(this, 'C')">C. Levels</div><div class="option" onclick="check(this, 'D')">D. Intervals</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 4.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. The others</div><div class="option" onclick="check(this, 'B')">B. Others</div><div class="option" onclick="check(this, 'C')">C. Another</div><div class="option" onclick="check(this, 'D')">D. Other</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 5.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. Call for</div><div class="option" onclick="check(this, 'B')">B. Catch on</div><div class="option" onclick="check(this, 'C')">C. Switch to</div><div class="option" onclick="check(this, 'D')">D. Check out</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 6.</b></p><div class="options"><div class="option" onclick="check(this, 'A')">A. As a result</div><div class="option" onclick="check(this, 'B')">B. In addition</div><div class="option" onclick="check(this, 'C')">C. In comparison</div><div class="option" onclick="check(this, 'D')">D. Instead</div></div></div>
+        <div class="nav-btns"><span></span><button onclick="nextPage(2)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-2" class="page">
+        <div class="section-title">PHẦN II. ĐỌC ĐIỀN TỪ (CÂU 7-11)</div>
+        <div class="passage">
+Many students assume that mathematical ability is inherited - that people either possess a natural talent for math or they do not. (7) ____. Over time, students who achieve the most success tend to be those who consistently put in effort, rather than those with the highest intelligence. For these learners, perseverance, rather than innate talent, (8) ____.
+
+In her book <b>Mindset: The New Psychology of Success</b>, (9) ____. Building on this idea, she argues that a student's mindset strongly influences how they respond to challenges. Those with a "fixed mindset" tend to believe their abilities are limited, so they often give up when faced with difficulty. In contrast, students with a "growth mindset" view challenges as opportunities to develop their skills. They understand that intelligence can be improved through practice and experience, and are therefore more willing to persist.
+
+A similar idea is presented by Geoff Colvin in <b>Talent Is Overrated</b>. He emphasizes the importance of "deliberate practice," (10) ____. Although natural talent may provide an initial advantage, it is long-term dedication that ultimately leads to success. As one teacher notes, it is uncommon for a hardworking student to fail. Developing the right mindset is therefore essential. When students believe in their ability to improve and are encouraged to work consistently, (11) ____.
+        </div>
+        <div class="question" data-ans="C"><p><b>Question 7.</b></p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. As a result, intelligence has always been considered the most decisive factor in academic success</div>
+            <div class="option" onclick="check(this, 'B')">B. For example, many educators have long believed that mathematical talent is fixed at birth</div>
+            <div class="option" onclick="check(this, 'C')">C. However, recent research suggests that inborn ability may be less important than is often believed</div>
+            <div class="option" onclick="check(this, 'D')">D. In addition, schools should provide more structured support for students who struggle with mathematics</div>
+        </div></div>
+        <div class="question" data-ans="D"><p><b>Question 8.</b></p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Tends to be far less important than intelligence in achieving success</div>
+            <div class="option" onclick="check(this, 'B')">B. Is often regarded as a natural ability that cannot be easily developed</div>
+            <div class="option" onclick="check(this, 'C')">C. Reflects the level of natural intelligence that students are born with</div>
+            <div class="option" onclick="check(this, 'D')">D. Plays a central role in achieving long-term academic success</div>
+        </div></div>
+        <div class="question" data-ans="A"><p><b>Question 9.</b></p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Carol Dweck introduces the idea that individuals' beliefs about ability can shape their learning outcomes</div>
+            <div class="option" onclick="check(this, 'B')">B. Introducing the idea that individuals' beliefs about ability can shape their learning outcomes is by Carol Dweck</div>
+            <div class="option" onclick="check(this, 'C')">C. That individuals' beliefs about ability can shape their learning outcomes are the idea by Carol Dweck</div>
+            <div class="option" onclick="check(this, 'D')">D. The idea by Carol Dweck that individuals' beliefs about ability can shape their learning outcomes are introduced</div>
+        </div></div>
+        <div class="question" data-ans="B"><p><b>Question 10.</b></p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Whose focused and sustained effort helps to improve performance over time</div>
+            <div class="option" onclick="check(this, 'B')">B. Which involves focused and sustained effort to improve performance</div>
+            <div class="option" onclick="check(this, 'C')">C. Involved in focused and sustained effort to improve performance effectively</div>
+            <div class="option" onclick="check(this, 'D')">D. Which involves focused and sustained effort, improving performance over time</div>
+        </div></div>
+        <div class="question" data-ans="B"><p><b>Question 11.</b></p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. The likelihood of overcoming challenges and achieving their full potential is greatly diminished</div>
+            <div class="option" onclick="check(this, 'B')">B. They are more likely to overcome challenges and achieve their full potential</div>
+            <div class="option" onclick="check(this, 'C')">C. They stand a slim chance of overcoming challenges and achieving their full potential</div>
+            <div class="option" onclick="check(this, 'D')">D. Overcoming challenges and achieving their full potential seems increasingly unlikely</div>
+        </div></div>
+        <div class="nav-btns"><button onclick="nextPage(1)">Quay lại</button><button onclick="nextPage(3)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-3" class="page">
+        <div class="section-title">PHẦN III. ĐỌC HIỂU (PASSAGE 1)</div>
+        <div class="passage">
+<b>Exam-Obsessed Schools Leave Youth Unprepared for Work</b>
+
+An "exam-obsessed" school system is leaving young people fundamentally unprepared for the workforce, according to Alan Milburn. The former cabinet minister, currently leading a government-commissioned review into young people and work, argues that the current model is "brilliant at sorting young people by academic ability" but "poor at equipping them for adult life." Milburn's intervention highlights a growing disconnect between classroom priorities and the demands of a fast-changing labour market, where employers frequently report that school leavers are simply not work-ready.
+
+New YouGov polling of over 1,000 teachers reinforces this concern, with 74% stating there is too much emphasis on passing exams. Furthermore, 73% of educators believe there is <u>insufficient</u> focus on developing essential "soft skills" or preparing pupils for employment. The data reveals a troubling trend: six in ten teachers say young people's soft skills have worsened over the past five years, while 66% believe overall readiness for work has declined. <b>This</b> serves as a "gauntlet" to policymakers to bridge the gap between academic standards and employability.
+
+Milburn insists that <u>high educational standards and real-world skills are not competing priorities.</u> Instead, he advocates for a curriculum fostering the attributes young people need to succeed - communication and collaboration skills, agility and creativity - alongside formal qualifications. Teachers largely support this shift, with 98% backing universal careers advice and 92% supporting vocational pathways before age 16. There is a clear consensus that the system must provide alternative routes for those who struggle under the current high-stakes testing regime without lowering overall standards.
+
+The review comes as official statistics show nearly 1 million 16- to 24-year-olds are not in education, employment, or training (Neet). Milburn warns that a system judged more on exam results than student destinations will face increasing scrutiny. To reverse the rise in youth inactivity, he calls for stronger links with employers and expanded access to meaningful work experience, asserting that government ambition must be matched by "action at scale" to ensure long-term economic and social success.
+        </div>
+        <div class="question" data-ans="D"><p><b>Question 12.</b> The word "<b>Equipping</b>" in paragraph 1 is closest in meaning to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. modifying</div><div class="option" onclick="check(this, 'B')">B. neglecting</div><div class="option" onclick="check(this, 'C')">C. challenging</div><div class="option" onclick="check(this, 'D')">D. providing</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 13.</b> The word "<u>insufficient</u>" in paragraph 2 is OPPOSITE in meaning to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. complete</div><div class="option" onclick="check(this, 'B')">B. ample</div><div class="option" onclick="check(this, 'C')">C. deficient</div><div class="option" onclick="check(this, 'D')">D. inadequate</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 14.</b> The word "<b>This</b>" in paragraph 2 refers to</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. the YouGov polling results involving over 1,000 teachers nationwide</div>
+            <div class="option" onclick="check(this, 'B')">B. the perceived lack of sufficient focus on developing essential soft skills</div>
+            <div class="option" onclick="check(this, 'C')">C. the excessive emphasis on passing exams in the current school system</div>
+            <div class="option" onclick="check(this, 'D')">D. the declining trend in soft skills and overall work readiness among youth</div>
+        </div></div>
+        <div class="question" data-ans="D"><p><b>Question 15.</b> Which of the following best paraphrases the <u>underlined sentence</u> in paragraph 3?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Milburn suggests that real-world skills should be prioritized over maintaining high educational standards.</div>
+            <div class="option" onclick="check(this, 'B')">B. Milburn believes that academic excellence and practical abilities should be treated as separate goals.</div>
+            <div class="option" onclick="check(this, 'C')">C. Milburn thinks that achieving high educational standards makes it impossible to develop real-world skills.</div>
+            <div class="option" onclick="check(this, 'D')">D. Milburn argues that high educational standards and real-world skills can and should be pursued together.</div>
+        </div></div>
+        <div class="question" data-ans="A"><p><b>Question 16.</b> Which of the following qualities is NOT identified in the passage as a key attribute for young people's success?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. leadership</div><div class="option" onclick="check(this, 'B')">B. creativity</div><div class="option" onclick="check(this, 'C')">C. flexibility</div><div class="option" onclick="check(this, 'D')">D. teamwork</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 17.</b> Which of the following is NOT TRUE according to the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Wide agreement favors creating alternative paths for struggling students while maintaining rigorous academic standards.</div>
+            <div class="option" onclick="check(this, 'B')">B. Milburn suggests classroom priorities are already well aligned with labour market expectations and student outcomes.</div>
+            <div class="option" onclick="check(this, 'C')">C. The number of young people not in education, employment, or training is currently approximately one million.</div>
+            <div class="option" onclick="check(this, 'D')">D. The government's goals require large-scale action to secure lasting economic and social prosperity.</div>
+        </div></div>
+        <div class="question" data-ans="B"><p><b>Question 18.</b> Which paragraph presents data used to support concerns about exam overemphasis?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. Paragraph 1</div><div class="option" onclick="check(this, 'B')">B. Paragraph 2</div><div class="option" onclick="check(this, 'C')">C. Paragraph 3</div><div class="option" onclick="check(this, 'D')">D. Paragraph 4</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 19.</b> In which paragraph does the writer mention the measures to counter the upward trend in youth disengagement?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. Paragraph 1</div><div class="option" onclick="check(this, 'B')">B. Paragraph 2</div><div class="option" onclick="check(this, 'C')">C. Paragraph 3</div><div class="option" onclick="check(this, 'D')">D. Paragraph 4</div></div></div>
+        <div class="nav-btns"><button onclick="nextPage(2)">Quay lại</button><button onclick="nextPage(4)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-4" class="page">
+        <div class="section-title">PHẦN IV. ĐỌC HIỂU (PASSAGE 2)</div>
+        <div class="passage">
+Urban life has always involved a balancing of opportunities and rewards against dangers and stress; its motivating force is, in the broadest sense, money. Opportunities to make money mean competition and competition is stressful; it is often at its most intense in the largest cities, where opportunities are greatest. The presence of huge numbers of people inevitably involves more conflict, more travelling, the overloading of public services and exposure to those <b>deviants</b> and criminals who are drawn to the rich pickings of great cities. Crime has always flourished in the relative anonymity of urban life, but today's ease of movement makes its control more difficult than ever; there is much evidence that its extent has a direct relationship to the size of communities. City dwellers may become trapped in their homes by the fear of crime around them.
+
+As a defence against <u>these developments</u>, city dwellers tend to use various strategies to try and reduce the pressures upon themselves: contacts with other people are generally made brief and impersonal; doors are kept locked; telephone numbers may be ex-directory; journeys outside the home are usually hurried, rather than a source of pleasure. There are other strategies too which are positively harmful to the individual; for example, reducing awareness through drugs or alcohol. Furthermore, all these defensive forms of behaviour are harmful to society in general; they cause widespread loneliness and destroy the community's concern for its members. <u>Lack of informal social contact and indifference to the misfortunes of others, if they are not personally known to oneself, are amongst the major causes of urban crime.</u>
+
+Inner areas of cities tend to be abandoned by the more successful and left to those who have done badly in the competitive struggle or who belong to minority groups; these people are then geographically trapped because so much economic activity has migrated to the suburbs and beyond. Present-day architecture and planning have enormously worsened the human problems of urban life. [I] Old-established neighbourhoods have been <u>ruthlessly</u> swept away, by both public and private organisations, usually to be replaced by huge, ugly, impersonal structures. [II] People have been forced to leave their familiar homes, usually to be rehoused in tower blocks which are drab, inconvenient, and fail to provide any setting for human interaction or support. [III] Instead, every effort should be made to conserve the human scale of the environment, and to retain familiar landmarks. [IV]
+        </div>
+        <div class="question" data-ans="B"><p><b>Question 20.</b> According to paragraph 1, which of the following is NOT mentioned as an inevitable consequence of the vast population density in cities?</p><div class="options"><div class="option" onclick="check(this, 'A')">A. Overburdening of public service systems</div><div class="option" onclick="check(this, 'B')">B. Higher incidence of mental health problems</div><div class="option" onclick="check(this, 'C')">C. Increasing daily travel time</div><div class="option" onclick="check(this, 'D')">D. Increased levels of conflict among people</div></div></div>
+        <div class="question" data-ans="B"><p><b>Question 21.</b> The word "<b>deviants</b>" in paragraph 1 is closest in meaning to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. strangers</div><div class="option" onclick="check(this, 'B')">B. offenders</div><div class="option" onclick="check(this, 'C')">C. activists</div><div class="option" onclick="check(this, 'D')">D. outsiders</div></div></div>
+        <div class="question" data-ans="A"><p><b>Question 22.</b> Which of the following statements best summarizes paragraph 1?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Urban life involves a tension between opportunities and pressures, largely shaped by financial motives and competition.</div>
+            <div class="option" onclick="check(this, 'B')">B. The growth of large cities increases crime and social strain due to today's ease of movement and overburdened services.</div>
+            <div class="option" onclick="check(this, 'C')">C. High population density in cities leads to competition, conflict, and stress among individuals seeking economic success.</div>
+            <div class="option" onclick="check(this, 'D')">D. The main difficulty of city life lies in managing crime, which is intensified by the ease of movement and anonymity.</div>
+        </div></div>
+        <div class="question" data-ans="D"><p><b>Question 23.</b> In paragraph 2, the phrase "<u>these developments</u>" primarily refers to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. the rich pickings of great cities</div><div class="option" onclick="check(this, 'B')">B. urban chances, wealth, and rewards</div><div class="option" onclick="check(this, 'C')">C. city dwellers trapped in their homes</div><div class="option" onclick="check(this, 'D')">D. rising urban stress, crime, and fear</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 24.</b> Which of the following best paraphrases the <u>underlined sentence</u> in paragraph 2?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. People who do not have personal acquaintances in the city are more likely to become victims of crime and misfortune.</div>
+            <div class="option" onclick="check(this, 'B')">B. The main cause of crime in urban areas is that residents are too busy to establish formal social contacts with their neighbors.</div>
+            <div class="option" onclick="check(this, 'C')">C. A significant factor in city crime is the absence of casual social interaction and a lack of concern for strangers' problems.</div>
+            <div class="option" onclick="check(this, 'D')">D. Urban crime is primarily driven by the fact that city dwellers do not know how to help strangers who are in trouble.</div>
+        </div></div>
+        <div class="question" data-ans="D"><p><b>Question 25.</b> The word "<u>ruthlessly</u>" in paragraph 4 is OPPOSITE in meaning to</p><div class="options"><div class="option" onclick="check(this, 'A')">A. aggressively</div><div class="option" onclick="check(this, 'B')">B. efficiently</div><div class="option" onclick="check(this, 'C')">C. indifferently</div><div class="option" onclick="check(this, 'D')">D. compassionately</div></div></div>
+        <div class="question" data-ans="D"><p><b>Question 26.</b> Which of the following is TRUE according to the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Old neighbourhoods were improved and replaced by large modern buildings that strengthened community interaction.</div>
+            <div class="option" onclick="check(this, 'B')">B. There might be little or no significant correlation between the scale of a community and criminal activity.</div>
+            <div class="option" onclick="check(this, 'C')">C. Urban residents adopt impersonal behaviours that contribute to greater psychological pressure and decreased isolation.</div>
+            <div class="option" onclick="check(this, 'D')">D. The more affluent move out of inner-city areas, leaving poorer groups confined to places where economic activity has shifted.</div>
+        </div></div>
+        <div class="question" data-ans="C"><p><b>Question 27.</b> Where in paragraph 4 does the following sentence best fit? <br><i>"This destruction of established social structures is the worst possible approach to the difficulties of living in a town or city"</i></p><div class="options"><div class="option" onclick="check(this, 'A')">A. [I]</div><div class="option" onclick="check(this, 'B')">B. [II]</div><div class="option" onclick="check(this, 'C')">C. [III]</div><div class="option" onclick="check(this, 'D')">D. [IV]</div></div></div>
+        <div class="question" data-ans="C"><p><b>Question 28.</b> Which of the following can be inferred from the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Efforts to strengthen social cohesion may be limited only if structural issues remain unaddressed.</div>
+            <div class="option" onclick="check(this, 'B')">B. Measures aimed at reducing crime are unlikely to succeed unless individuals increase social interaction.</div>
+            <div class="option" onclick="check(this, 'C')">C. Preserving aspects of traditional urban environments could play a role in mitigating social and psychological problems.</div>
+            <div class="option" onclick="check(this, 'D')">D. Expanding economic activity beyond city centres would likely reduce inequality for disadvantaged populations.</div>
+        </div></div>
+        <div class="question" data-ans="A"><p><b>Question 29.</b> Which of the following best summarises the passage?</p><div class="options">
+            <div class="option" onclick="check(this, 'A')">A. Financial motives in cities lead to social strain, exacerbated by flawed architectural design and defensive behaviors.</div>
+            <div class="option" onclick="check(this, 'B')">B. The inherent stresses of urban life, individual coping mechanisms and flawed development lead to societal breakdown.</div>
+            <div class="option" onclick="check(this, 'C')">C. Urban life offers rewards but creates individual stress and isolation, worsened by poor planning and rising crime.</div>
+            <div class="option" onclick="check(this, 'D')">D. Urban life provides economic wealth but causes social conflict, while modern planning supports human interaction.</div>
+        </div></div>
+        <div class="nav-btns"><button onclick="nextPage(3)">Quay lại</button><button onclick="nextPage(5)">Tiếp theo</button></div>
+    </div>
+
+    <div id="page-5" class="page">
+        <div class="section-title">PHẦN V. SẮP XẾP CÂU / ĐOẠN VĂN</div>
+        
+        <div class="question" data-ans="A">
+            <p><b>Question 30.</b> Mark the best arrangement of sentences to make a meaningful text:</p>
+            <div class="full-text-box">
+                a. However, many teenagers argue that these bans are ineffective, as students often find ways around them.<br>
+                b. Some also point out that school-provided laptops and tablets can be equally distracting.<br>
+                c. For this reason, many students believe that teaching responsible technology use may be more effective.<br>
+                d. Schools have recently introduced a range of technology bans in an effort to reduce distractions.<br>
+                e. Even so, some students admit that strictly enforced measures can improve concentration.
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. d-a-b-e-c</div>
+                <div class="option" onclick="check(this, 'B')">B. d-b-a-e-c</div>
+                <div class="option" onclick="check(this, 'C')">C. a-d-b-e-c</div>
+                <div class="option" onclick="check(this, 'D')">D. a-b-d-e-c</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <p><b>Question 31.</b> Mark the best arrangement of utterances:</p>
+            <div class="full-text-box">
+                a. Alex: Why do you think knitting is helpful?<br>
+                b. Sue: I'm going to try knitting to relax after school.<br>
+                c. Alex: How are you going to calm your mind after stressful days?<br>
+                d. Alex: I think knitting takes too much patience. I don't think I'll try it.<br>
+                e. Sue: It helps people focus on simple movements, reduces stress, and makes them feel calmer.
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. c-e-d-b-a</div>
+                <div class="option" onclick="check(this, 'B')">B. d-e-a-b-c</div>
+                <div class="option" onclick="check(this, 'C')">C. c-b-a-e-d</div>
+                <div class="option" onclick="check(this, 'D')">D. d-b-a-e-c</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <p><b>Question 32.</b> Mark the best arrangement of utterances:</p>
+            <div class="full-text-box">
+                a. Nam: Hi, Mark! Long time no see. You look so healthy!<br>
+                b. Nam: Yes, I have. I've been eating more fibre-rich foods because they are good for digestion.<br>
+                c. Mark: Hi, Nam! Thanks. You look great, too. Have you changed your eating habits lately?
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. c-a-b</div>
+                <div class="option" onclick="check(this, 'B')">B. b-c-a</div>
+                <div class="option" onclick="check(this, 'C')">C. a-c-b</div>
+                <div class="option" onclick="check(this, 'D')">D. c-b-a</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="C">
+            <p><b>Question 33.</b> Mark the best arrangement for a meaningful letter:</p>
+            <div class="full-text-box">
+                <b>Hi Gemma,</b><br>
+                a. I was quite surprised that something as ordinary as wrapping a present could involve planning.<br>
+                b. When people know the exact dimensions of a gift, they can calculate a suitable amount of paper.<br>
+                c. This often makes the present look more elegant and helps avoid wasting materials.<br>
+                d. I recently came across an article about the maths formula for perfectly wrapped gifts.<br>
+                e. I hope you will try this idea someday, because it can make gift-giving more meaningful.
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. b-e-a-d-c</div>
+                <div class="option" onclick="check(this, 'B')">B. d-e-a-b-c</div>
+                <div class="option" onclick="check(this, 'C')">C. d-a-b-c-e</div>
+                <div class="option" onclick="check(this, 'D')">D. a-d-b-c-e</div>
+            </div>
+        </div>
+
+        <div class="question" data-ans="A">
+            <p><b>Question 34.</b> Mark the best arrangement for a text about AI:</p>
+            <div class="full-text-box">
+                a. Researchers warn that relying too heavily on these tools may weaken memory and creativity.<br>
+                b. In one MIT study, students who used ChatGPT to write essays showed much less brain activity.<br>
+                c. As large language models become more common, many use them to complete independent tasks.<br>
+                d. Some experts fear that accepting AI-generated answers may eventually contribute to cognitive decline.<br>
+                e. Teachers also found that many AI-assisted essays looked similar, lacked originality and were "soulless."
+            </div>
+            <div class="options">
+                <div class="option" onclick="check(this, 'A')">A. c-a-e-b-d</div>
+                <div class="option" onclick="check(this, 'B')">B. c-e-a-b-d</div>
+                <div class="option" onclick="check(this, 'C')">C. c-e-b-a-d</div>
+                <div class="option" onclick="check(this, 'D')">D. c-a-b-e-d</div>
+            </div>
+        </div>
+
+        <div class="nav-btns"><button onclick="nextPage(4)">Quay lại</button><button onclick="finishExam()">NỘP BÀI</button></div>
+    </div>
+
+    <div id="page-result" class="page">
+        <h1>HOÀN THÀNH BÀI THI</h1>
+        <div id="result-display" style="text-align: center; font-size: 24px; margin-top: 30px;"></div>
+        <div style="text-align: center; margin-top: 50px;">
+            <button onclick="location.reload()">LÀM LẠI</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+        let studentName = "";
+        let answeredQuestions = new Set();
+        const totalQ = 34; // Tổng số câu hỏi trong đề này
+
+        function startQuiz() {
+            studentName = document.getElementById('student-name').value;
+            if(!studentName) { alert("Vui lòng nhập tên!"); return; }
+            nextPage(1);
+        }
+
+        function nextPage(num) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + num).classList.add('active');
+            window.scrollTo(0,0);
+        }
+
+        function check(element, choice) {
+            let qDiv = element.closest('.question');
+            let qId = qDiv.querySelector('b').innerText;
+            if(answeredQuestions.has(qId)) return;
+            let correctAns = qDiv.getAttribute('data-ans');
+            answeredQuestions.add(qId);
+            if(choice === correctAns) {
+                element.classList.add('correct');
+                score++;
+            } else {
+                element.classList.add('incorrect');
+            }
+            qDiv.querySelectorAll('.option').forEach(opt => opt.classList.add('locked'));
+        }
+
+        function finishExam() {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-result').classList.add('active');
+            let finalPoint = (score / totalQ) * 10;
+            document.getElementById('result-display').innerHTML = `
+                <p>Học sinh: <b>${studentName}</b></p>
+                <p>Số câu đúng: <b>${score} / ${totalQ}</b></p>
+                <p style="font-size: 35px; color: #1a73e8;">ĐIỂM HỆ 10: <b>${finalPoint.toFixed(2)}</b></p>
+            `;
+        }
+    </script>
+</body>
+</html>
